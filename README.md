@@ -1,5 +1,5 @@
 # ChineseStrokeSorting
-中文笔划排序
+中文笔划排序，博客介绍链接为： https://blog.csdn.net/ouyang_peng/article/details/83863693
 
 
 # demo 
