@@ -1,16 +1,11 @@
 package com.oyp.csdn.test;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
-import com.junfeng.strokesort.comparator.StringStrokeComparator;
-
-public class TestStringStrokeComparator {
-
+public class ArraySort {
     public static void main(String[] args) {
+        // 定義一個中文字串資料陣列
         List<String> name = new ArrayList<String>();
-
         name.add("歐陽鵬");
         name.add("阿森松島");
         name.add("安道爾");
@@ -78,8 +73,16 @@ public class TestStringStrokeComparator {
         name.add("犓");
         name.add("犫");
 
-        /** 使用 */
-        Collections.sort(name, new StringStrokeComparator());
+        Collections.sort(name, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                //看起来''Locale.SIMPLIFIED_CHINESE'由中文拼音排序，但''Locale.TRADITIONAL_CHINESE'按笔画排序。
+                java.text.Collator collator = java.text.Collator.getInstance(Locale.TRADITIONAL_CHINESE);
+//                java.text.Collator collator = java.text.Collator.getInstance(Locale.SIMPLIFIED_CHINESE);
+                return collator.compare(o1, o2);
+            }
+        });
+
         for (String string : name) {
             System.out.println(string);
         }
