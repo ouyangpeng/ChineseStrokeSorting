@@ -1,6 +1,10 @@
 # ChineseStrokeSorting
 中文笔划排序，博客介绍链接为： https://blog.csdn.net/ouyang_peng/article/details/83863693
 
+关于Android实现 中文拼音排序以及中文笔划排序和英文排序Demo，参考博客介绍链接：https://blog.csdn.net/ouyang_peng/article/details/84109727
+
+github地址：https://github.com/ouyangpeng/ChinesePinyinSortAndStrokeSort
+
 
 # demo 
 
